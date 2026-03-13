@@ -16,6 +16,7 @@ header {
 .container-menu {
     display: flex;
     justify-content: end;
+    position: relative;
 }
 
 .container-button {
@@ -38,7 +39,7 @@ header {
 .menu-list {
     display: none;
     position: absolute;
-    width: 30%;
+    width: 200px;
     text-align: center;
 }
 
@@ -97,15 +98,15 @@ header {
     }
 
     .menu-desktop-links li a {
-        font-size: 16px;
-        font-weight: 400;
+        font-size: var(--font-size-xs);
+        font-weight: var(--regular-weight);
         color: var(--font-color-quinternary);
         text-decoration: none;
     }
 
     .menu-contact {
         font-size: 14px;
-        font-weight: 900;
+        font-weight: var(--extra-bold-weight);
         color: var(--font-color-quinternary);
         text-decoration: none;
         padding: 14px 28px;

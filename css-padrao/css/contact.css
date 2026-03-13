@@ -12,16 +12,16 @@
 
 .contact-text h3 {
     color: var(--font-color-quinternary);
-    font-size: 40px;
-    font-weight: 800;
+    font-size: var(--font-size-l);
+    font-weight: var(--extra-bold-weight);
     line-height: 48px;
     margin-bottom: 16px;
 }
 
 .contact-text p {
-    font-size: 16px;
+    font-size: var(--font-size-xs);
     color: var(--font-color-tertiary);
-    font-weight: 400;
+    font-weight: var(--regular-weight);
     line-height: 32px;
     margin-bottom: 21px;
 }
@@ -37,17 +37,15 @@
     }
 
     .contact-text {
-        display: inline-block;
         width: 40%;
     }
 
     .contact-img{
-        display: inline-block;
         width: 40%;
     }
 
     .contact-text h3 {
-        font-size: 56px;
+        font-size: var(--font-size-xl);
         line-height: 64px;
     }
 

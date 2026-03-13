@@ -8,14 +8,14 @@ footer {
 .footer-title {
     margin-top: 0;
     margin-bottom: 50px;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: var(--font-size-m);
+    font-weight: var(--bold-weight);
     color: var(--font-color-primary);
     line-height: 32px;
 }
 
 .footer-links h5 {
-    font-size: 16px;
+    font-size: var(--font-size-xs);
     color: var(--font-color-quaternary);
     font-weight: 400;
     line-height: 32px;
@@ -23,7 +23,7 @@ footer {
 }
 
 .footer-links p {
-    font-size: 16px;
+    font-size: var(--font-size-xs);
     font-weight: 400;
     color: var(--font-color-primary);
     line-height: 32px;
@@ -49,8 +49,8 @@ footer {
 }
 
 .footer-direitos {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: var(--font-size-xs);
+    font-weight: var(--regular-weight);
     color: var(--font-color-secundary);
     line-height: 32px;
     width: 50%;
@@ -66,8 +66,8 @@ footer {
 
 .links-terms a {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: var(--font-size-xs);
+    font-weight: var(--regular-weight);
     color: var(--font-color-primary);
     line-height: 32px;
 
