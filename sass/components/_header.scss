@@ -1,0 +1,118 @@
+@use '../abstract/variaveis';
+@use './global';
+
+header {
+    background-color: variaveis.$background-primaria;
+    .container {
+    padding: 16px 23px;
+    display: flex;
+    justify-content: space-between;
+        .container-logo {
+            width: 152px;
+            height: 48px;
+        }
+        .container-menu {
+            display: flex;
+            justify-content: end;
+            position: relative;
+            label {
+                .container-menu-mobile {
+                    width: 48px;
+                    height: 48px;
+                    background-image: url("img/menu.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    display: inline-block;
+                }
+            }
+            .menu-list {
+                display: none;
+                position: absolute;
+                width: 200px;
+                text-align: center;
+                border-radius: 6px;
+                .menu-list-item {
+                    padding: 4px;
+                    list-style-type: none; 
+                    background-color: variaveis.$background-quaternaria;
+                    .menu-list-link {
+                        text-decoration: none;
+                        color: variaveis.$font-color-primaria;
+                    }
+                }
+            }
+            .container-button {
+                display: none;
+                &:checked ~ .menu-list{
+                    display: block;
+                    margin-top: 48px;
+                    padding: 4px;
+                    background-color: variaveis.$background-quaternaria;
+                }
+            }
+        }
+        .container-menu-desktop {
+            display: none;
+            .container-logo-desktop {
+                display: none;
+            }
+        }
+        @media screen and (min-width: 1024px){
+        .container-logo{
+            display: none;
+        }
+        .container-menu {
+            display: none;
+        }
+        .container-menu-desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+            .container-logo-desktop {
+                display: block;
+                width: 152px;
+                height: 48px;
+            }
+            .menu-desktop-links {
+                display: flex;
+                gap: 4rem;
+                li {
+                    list-style-type: none;   
+                    a {
+                        text-decoration: none;
+                        color: variaveis.$font-color-secundaria;
+                    }
+                }
+            }
+            .menu-contact {
+                font-size: 14px;
+                font-weight: variaveis.$button-bold-weight;
+                color: variaveis.$font-color-secundaria;
+                text-decoration: none;
+                padding: 14px 28px;
+                border: 1px solid variaveis.$color-border-secundaria;
+                border-radius: 6px;
+            }
+        }
+    }
+    }
+    .description {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        padding-bottom: 88px;
+        h2 {
+            @extend .title2;
+        }
+        p {
+            @extend .text;
+            color: variaveis.$font-color-quaternaria;
+            text-align: center;
+            padding:0 23px;
+        }
+    }
+    
+}
