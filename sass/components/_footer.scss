@@ -1,0 +1,87 @@
+@use '../abstract/variaveis';
+@use './global';
+
+footer {
+    background-color: variaveis.$background-secundaria;
+    padding: 105px 23px 52px 23px;
+    margin-top: 0;
+    text-align: center;
+    .footer-primary {
+        .footer-title {
+            margin-top: 105px;
+            margin-bottom: 50px;
+            color: variaveis.$font-color-primaria;
+            line-height: 32px;
+        }
+        .footer-links{
+            h5 {
+                margin-bottom: 16px;
+            }
+            p {
+                color: variaveis.$font-color-primaria;
+            }
+        }
+        .links {
+            margin: 52px auto 64px auto;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            a{
+                background-color: variaveis.$font-color-subtitulo;
+                border-radius: 50%;
+                text-decoration: none;
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                width: 48px;
+                height: 48px;
+                gap: 8px;
+            }
+        }
+    }
+    hr {
+        margin:0 auto;
+        border: 1px solid variaveis.$color-border-primaria;
+    }
+    .footer-secundary {
+        .footer-direitos {
+            color: variaveis.$font-color-terciaria;
+            width: 50%;
+            margin: 43px auto;
+        }
+        .links-terms {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin: 0 auto;
+            a {
+                text-decoration: none;
+                color: variaveis.$font-color-primaria;
+            }
+        }
+    }
+    @media screen and (min-width: 1024px){
+        margin-top: 92px;
+        padding: 92px 135px;
+        .footer-primary {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 68px;
+            .links {
+                margin: 0
+            }
+        }
+        .footer-secundary{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .footer-direitos {
+                .links-terms {
+                    justify-content: end;
+                    gap: 68px;
+                }
+            }
+        }
+    }
+}
+
