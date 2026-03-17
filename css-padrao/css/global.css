@@ -1,0 +1,47 @@
+/*Cores*/
+:root {
+    --background-header: #28293E;
+    --background-primary: #FDF0E9;
+    --background-secundary: #EF6D58;
+    --background-tertiary: rgba(48, 49, 78, 0.827);
+
+    --font-color-primary: #391400;
+    --font-color-secundary: #391400A3;
+    --font-color-tertiary: #FFFFFFA3;
+    --font-color-quaternary: #EF6D58;
+    --font-color-quinternary: #FFFFFF;
+
+    --hr-color: #F3D1BF;
+
+    --font-size-xs: 16px;
+    --font-size-s: 20px;
+    --font-size-m: 24px;
+    --font-size-l: 40px;
+    --font-size-xl: 56px;
+
+    --regular-weight: 400;
+    --bold-weight: 700;
+    --extra-bold-weight: 800;
+}
+
+/* CSS RESET */
+body,
+img,
+h1,
+p,
+fieldset,
+legend,
+label,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Epilogue", sans-serif;
+}
+

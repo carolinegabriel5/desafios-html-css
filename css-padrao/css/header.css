@@ -1,0 +1,116 @@
+header {
+    background-color: var(--background-header);
+}
+
+.container {
+    padding: 16px 23px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-logo {
+    width: 152px;
+    height: 48px;
+}
+
+.container-menu {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+.container-button {
+    display: none;
+}
+
+.container-menu-mobile {
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.container-logo-desktop {
+    display: none;
+}
+
+.menu-list {
+    display: none;
+    position: absolute;
+    width: 200px;
+    text-align: center;
+}
+
+.container-button:checked~.menu-list{
+    display: block;
+    margin-top: 48px;
+    padding: 4px;
+    background-color: var(--background-header);
+}
+
+.menu-list-link {
+    text-decoration: none;
+    color: var(--font-color-tertiary);
+}
+
+.menu-list-item {
+    padding: 4px;
+    list-style-type: none; 
+    background-color: var(--background-tertiary);
+}
+
+.container-menu-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .container-menu {
+        display: none;
+    }
+
+    .container-logo{
+        display: none;
+    }
+
+    .container-logo-desktop {
+        display: block;
+        width: 152px;
+        height: 48px;
+    }
+
+    .container-menu-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .menu-desktop-links {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .menu-desktop-links li {
+        list-style-type: none;   
+    }
+
+    .menu-desktop-links li a {
+        font-size: var(--font-size-xs);
+        font-weight: var(--regular-weight);
+        color: var(--font-color-quinternary);
+        text-decoration: none;
+    }
+
+    .menu-contact {
+        font-size: 14px;
+        font-weight: var(--extra-bold-weight);
+        color: var(--font-color-quinternary);
+        text-decoration: none;
+        padding: 14px 28px;
+        border: 1px solid #FFFFFF4B;
+        border-radius: 6px;
+    }
+}
