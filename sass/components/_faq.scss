@@ -1,0 +1,89 @@
+@use '../abstract/variaveis';
+@use './global';
+
+.faq {
+    margin: 0;
+    background: variaveis.$color-primary;
+    padding: 0 23px;
+    h5 {
+        margin: 0;
+    }
+    h3 {
+        color: variaveis.$color-light;
+        margin: 16px 0;
+    }
+    p {
+        color: variaveis.$color-light-gray;
+    }
+    .contact-me {
+        display: block;
+        color: variaveis.$color-light;
+        padding: 34px 0;
+        text-decoration: none;
+    }
+    .cards {
+        .card {
+            padding: 41px 28px 38px 28px;
+            border-color: variaveis.$color-border-secundaria;
+            .card-titulo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                h4 {
+                    color: variaveis.$color-light;
+                    margin: 0;
+                }
+                .check-expandir {
+                    display: none;
+                }
+                .icon-expandir {
+                    background-color: variaveis.$color-light-accent;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    flex-shrink: 0;
+                    display: inline-block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &:has(.check-expandir:checked) ~ .text {
+                    max-height: 200px;
+                    opacity: 1;
+                    margin-top: 15px;
+                }
+                
+                &:has(.check-expandir:checked) .icon-expandir img {
+                    transform: rotate(180deg);
+                    transition: 0.3s;
+                }
+            }
+            
+            .text {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.4s ease;
+                margin: 0;
+            }
+            
+            &:has(.check-expandir:checked){
+                background-color: variaveis.$color-light;
+                .card-titulo{
+                    h4 {
+                        color: variaveis.$color-dark;
+                    }
+                }
+                p {
+                    color: variaveis.$color-dark-gray;
+                }
+                
+                }
+        }
+    }
+    @media screen and (min-width: 1024px){
+        padding: 0 305px;
+    }
+}

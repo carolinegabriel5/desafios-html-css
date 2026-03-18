@@ -1,0 +1,121 @@
+@use '../abstract/variaveis';
+@use './global';
+
+.testimonials {
+    margin: 0;
+    background-color: variaveis.$color-primary;
+    .avaliacao {
+        input[type="radio"] {
+            display: none;
+        }
+        .testimonials-inicio {
+            text-align: center;
+            h5 {
+                margin: 0;
+                padding: 120px 0 17px;
+                
+            }
+            h3 {
+                color: variaveis.$color-light;
+                padding: 0 42px 35px 42px;
+            }
+        }
+        .notas-clientes {
+            background-color: variaveis.$color-light;
+            display: flex;
+            overflow: hidden;
+            flex-wrap: nowrap;
+            width: 100%;
+            border: 1px solid variaveis.$color-border-primaria;
+            border-radius: 0 0 6px 6px;
+            .nota {
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 58px 51px;
+                box-sizing: border-box;
+                transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+                .stars {
+                    display: flex;
+                    gap: 10px;
+                    .star {
+                        font-size: 40px;
+                        margin: 0;
+                        color: #F6D021;
+                    }
+                }
+                p {
+                    color: variaveis.$color-dark-gray;
+                }
+                .pessoa {
+                    display: flex;
+                    gap: 24px;
+                    align-items: center;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    .pessoa-texto {
+                        h4 {
+                            margin: 0;
+                        }
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+        #v1:checked ~ .notas-clientes .nota { transform: translateX(0); }
+        #v2:checked ~ .notas-clientes .nota { transform: translateX(-100%); }
+        #v3:checked ~ .notas-clientes .nota { transform: translateX(-200%); }
+        #v4:checked ~ .notas-clientes .nota { transform: translateX(0); }
+
+        #v1:checked ~ .pins label[for="v1"],
+        #v2:checked ~ .pins label[for="v2"],
+        #v3:checked ~ .pins label[for="v3"],
+        #v4:checked ~ .pins label[for="v4"]{
+            background-color: variaveis.$color-light-accent;
+        }
+
+        .pins {
+            background-color: variaveis.$color-primary;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 48px;
+            padding-bottom: 112px;
+
+            label {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid variaveis.$color-border-secundaria;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+        }
+        
+            
+    }
+    @media screen and (min-width: 1024px){
+        .avaliacao{
+            max-width:1200px;
+            margin:auto;
+            overflow:hidden;
+            .notas-clientes{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:40px;
+            }
+            .testimonials-inicio {
+                text-align: center;
+                h5 {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+   
