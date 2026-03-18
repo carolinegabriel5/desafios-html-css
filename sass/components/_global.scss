@@ -1,0 +1,61 @@
+@use '../abstract/variaveis';
+
+body {
+    font-family: variaveis.$fonte;
+}
+
+.title2 {
+    font-size: variaveis.$font-size-xl;
+    font-weight: variaveis.$extra-bold-weight;
+    line-height: 64px;
+    color: variaveis.$color-light;
+}
+
+.title3 {
+    font-size: variaveis.$font-size-l;
+    font-weight: variaveis.$extra-bold-weight;
+    line-height: 48px;
+    margin: 0;
+}
+
+.title4 {
+    font-size: variaveis.$font-size-m;
+    font-weight: variaveis.$bold-weight;
+    line-height: 32px;
+}
+
+.title5 {
+    font-size: variaveis.$font-size-base;
+    font-weight: variaveis.$regular-weight;
+    line-height: 32px;
+    color: variaveis.$color-light-accent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.text-big {
+    font-size: variaveis.$font-size-s;
+    font-weight: variaveis.$regular-weight;
+    line-height: 32px;
+    color: variaveis.$color-dark;
+    margin: 0;
+}
+
+.text {
+    font-size: variaveis.$font-size-base;
+    font-weight: variaveis.$regular-weight;
+    line-height: 32px;
+}
+
+.card {
+    border: 1px solid variaveis.$color-border-primaria;
+    padding: 48px 40px 46px 48px;
+}
+
+.card-top {
+    border-radius: 6px 6px 0 0;
+}
+
+.card-bottom {
+    border-radius: 0 0 6px 6px;
+}
