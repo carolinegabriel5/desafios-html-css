@@ -48,11 +48,11 @@
             box-sizing: border-box;
         }
         body{
-  overflow-x:hidden;
-}
-header{
-  width:100%;
-}
+            overflow-x:hidden;
+        }
+        header{
+            width:100%;
+        }
         .container-button:checked ~ .menu-list {
           display: block;
         }
@@ -60,7 +60,6 @@ header{
 </head>
 <body>
     <header class="bg-header">
-        
         <div class="py-4 px-6 flex justify-between items-center md:hidden">
             <img src="img/logo.png" alt="Logo da Agency" class="h-10">
             <div class="flex justify-end relative">
@@ -112,5 +111,65 @@ header{
                 <p class="text-text text-light_gray text-center mt-3 sm:w-[430px] pt-6">Agency provides a full service range including technical skills, design, business understanding.</p>
         </section>
     </header>
+    <main class="bg-main pt-8 px-6">
+        <section class="cards">
+            <div class="relative w-[330px] mx-auto md:hidden">
+                <select name="options" class="text-text text-dark_gray w-full border rounded-md border-hr px-4 py-2 appearance-none" >
+                    <option value="">Show All</option>
+                    <option value="design">Design</option>
+                    <option value="branding">Branding</option>
+                    <option value="illustration">Illustration</option>
+                    <option value="motion">Motion</option>
+                </select>
+                <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
+                    <img src="./img/Triangle.png" alt="">
+                </div>    
+            </div>
+            <div class="md:flex justify-center items-center gap-[60px] mt-10 hidden">
+                <a class="text-text text-dark" href="">Show All</a>
+                <a class="text-text text-dark_gray" href="">Design</a>
+                <a class="text-text text-dark_gray" href="">Branding</a>
+                <a class="text-text text-dark_gray" href="">Illustration</a>
+                <a class="text-text text-dark_gray" href="">Motion</a>
+            </div>
+            <div class="my-12 grid grid-cols-1 md:grid-cols-2 gap-x-8">
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8 md:col-span-2">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem1.png" alt=""> 
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-centeR mb-6 w-fit">Design</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">KeyBoard</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem2.png" alt="">
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Design</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">Sofa</h3>
+                    </div>
+                </div >
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem3.png" alt=""> 
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Branding</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">DDDone</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem4.png" alt="">
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Illustration</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">Work Media</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem5.png" alt=""> 
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Branding</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">HandP</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
