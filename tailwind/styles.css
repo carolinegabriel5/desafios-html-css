@@ -11,19 +11,4 @@
     --font-color-dark-accent: #EF6D58;
 
     --hr-color: #F3D1BF;
-
-    --font-size-xs: 16px;
-    --font-size-s: 20px;
-    --font-size-m: 24px;
-    --font-size-l: 40px;
-    --font-size-xl: 56px;
-
-    --regular-weight: 400;
-    --bold-weight: 700;
-    --extra-bold-weight: 800;
-    --button-bold-weight: 900;
-
-    --line-height-s: 32px;
-    --line-height-l: 48px;
-    --line-height-xl: 64px;
 }
