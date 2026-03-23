@@ -82,6 +82,11 @@ footer {
         display: flex;
         justify-content: space-between;
         margin-bottom: 68px;
+        text-align: start;
+    }
+
+    .footer-links h5 {
+        margin-top: 0;
     }
 
     .links {
@@ -94,6 +99,9 @@ footer {
         align-items: center;
     }
 
+    .footer-direitos {
+        text-align: start;
+    }
     .links-terms {
         justify-content: end;
         gap: 68px;
