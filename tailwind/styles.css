@@ -1,0 +1,14 @@
+:root {
+    --background-header: #28293E;
+    --background-main: #FDF0E9;
+    --background-button: #FFFFFF;
+    --background-contact: #EF6D58;
+
+    --font-color-light: #FFFFFF;
+    --font-color-light-gray: #FFFFFFA3;
+    --font-color-dark-gray: #391400A3;
+    --font-color-dark: #391400;
+    --font-color-dark-accent: #EF6D58;
+
+    --hr-color: #F3D1BF;
+}

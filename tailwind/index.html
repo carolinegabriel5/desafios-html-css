@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        header: 'var(--background-header)',
+                        main: 'var(--background-main)',
+                        button: 'var(--background-button)',
+                        contact: 'var(--background-contact)',
+                        light: 'var(--font-color-light)',
+                        light_gray: 'var(--font-color-light-gray)',
+                        dark_gray: 'var(--font-color-dark-gray)',
+                        dark: 'var(--font-color-dark)',
+                        dark_accent: 'var(--font-color-dark-accent)',
+                        hr: 'var(--hr-color)',
+                    },
+                    fontFamily: {
+                        epilogue: ['Epilogue', 'sans-serif']
+                    },
+                    fontSize: {
+                        title1: ['72px', { lineHeight: '64px', fontWeight: '800' }],
+                        title2: ['40px', { lineHeight: '64px', fontWeight: '800' }],
+                        title3: ['40px', { lineHeight: '48px', fontWeight: '800' }],
+                        title4: ['24px', { lineHeight: '32px', fontWeight: '700' }],
+                        title5: ['16px', { lineHeight: '32px', fontWeight: '400' }],
+                        text: ['16px', { lineHeight: '32px', fontWeight: '400' }],
+                        button: ['14px', {fontWeight: '900' }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        body{
+            overflow-x:hidden;
+        }
+        header{
+            width:100%;
+        }
+        .container-button:checked ~ .menu-list {
+          display: block;
+        }
+    </style>
+</head>
+<body class="font-epilogue">
+    <header class="bg-header">
+        <div class="py-4 px-6 flex justify-between items-center md:hidden">
+            <img src="img/logo.png" alt="Logo da Agency" class="h-10">
+            <div class="flex justify-end relative">
+                <input type="checkbox" id="menu" class="container-button hidden">
+                <label for="menu" class="cursor-pointer"> 
+                    <span class="w-12 h-12 inline-block bg-center bg-no-repeat" style="background-image: url('./img/menu.png');"></span>
+                </label>
+                <ul class="menu-list hidden absolute right-0 w-48 text-center mt-12 bg-contact list-none m-0 p-0"> 
+                    <li class="p-1 list-none">
+                        <a href="#" class="text-none text-light text-text">About</a>
+                    </li> 
+                    <li class="p-1 list-none">
+                        <a href="#" class="text-none text-light text-text">Services</a>
+                    </li> 
+                    <li class="p-1 list-none">
+                        <a href="#" class="text-none text-light text-text">Pricing</a>
+                    </li> 
+                    <li class="p-1 list-none">
+                        <a href="#" class="text-none text-light text-text">Blog</a>
+                    </li> 
+                    <li class="p-1 list-none">
+                        <a href="#" class="text-none text-light text-text">Contact</a>
+                    </li> 
+                </ul>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex py-4 px-6 justify-between items-center w-[90%] m-auto">
+                <img src="img/logo.png" alt="Logo da Agency" class="h-10">
+                <ul class="flex gap-x-10">
+                    <li>
+                        <a class="text-text text-light" href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="text-text text-light" href="#">Services</a>
+                    </li>
+                    <li>
+                        <a class="text-text text-light" href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="text-text text-light" href="#">Blog</a>
+                    </li>
+                </ul>
+                <a class="text-button text-light border border-light_gray rounded-[6px] px-6 py-3" href="#">CONTACT</a>
+            </div>
+        </div>
+        <section class="flex flex-col items-center justify-center pb-[88px] mx-6">
+                <h2 class="text-title1 text-light m-0 pt-[80px] ">Portfolio</h2>
+                <p class="text-text text-light_gray text-center mt-3 sm:w-[430px] pt-6">Agency provides a full service range including technical skills, design, business understanding.</p>
+        </section>
+    </header>
+    <main class="bg-main pt-8 px-6 md:px-[134px]">
+        <section class="cards">
+            <div class="relative w-[330px] mx-auto md:hidden">
+                <select name="options" class="text-text text-dark_gray w-full border rounded-md border-hr px-4 py-2 appearance-none" >
+                    <option value="">Show All</option>
+                    <option value="design">Design</option>
+                    <option value="branding">Branding</option>
+                    <option value="illustration">Illustration</option>
+                    <option value="motion">Motion</option>
+                </select>
+                <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
+                    <img src="./img/Triangle.png" alt="">
+                </div>    
+            </div>
+            <div class="md:flex justify-center items-center gap-[60px] mt-10 hidden">
+                <a class="text-text text-dark" href="">Show All</a>
+                <a class="text-text text-dark_gray" href="">Design</a>
+                <a class="text-text text-dark_gray" href="">Branding</a>
+                <a class="text-text text-dark_gray" href="">Illustration</a>
+                <a class="text-text text-dark_gray" href="">Motion</a>
+            </div>
+            <div class="my-12 grid grid-cols-1 md:grid-cols-2 gap-x-8">
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8 md:col-span-2">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem1.png" alt=""> 
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center mb-6 w-fit">Design</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">KeyBoard</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem2.png" alt="">
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Design</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">Sofa</h3>
+                    </div>
+                </div >
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem3.png" alt=""> 
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Branding</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">DDDone</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] mb-8">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem4.png" alt="">
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Illustration</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">Work Media</h3>
+                    </div>
+                </div>
+                <div class="w-full h-[416px] overflow-hidden relative rounded-[6px] ">
+                    <img class="absolute inset-0 w-full h-full object-cover object-left transition-all duration-500" src="./img/imagem5.png" alt=""> 
+                    <div class="relative z-10 p-10 h-full flex flex-col justify-end">
+                        <p class="text-text text-dark bg-button rounded-[19px] px-3 py-1 text-center w-fit mb-6">Branding</p>
+                        <h3 class="text-white text-5xl font-bold mb-3">HandP</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2 justify-center md:mt-4">
+                <div class="w-12 h-12 bg-dark_accent flex items-center justify-center rounded-[6px]">
+                    <a class="text-button text-light" href="">1</a>
+                </div>
+                <div class="w-12 h-12 bg-light flex items-center justify-center rounded-[6px]">
+                    <a class="text-button text-dark" href="">2</a>
+                </div>
+                <div class="w-12 h-12 bg-light flex items-center justify-center rounded-[6px]">
+                    <a class="text-button text-dark" href="">3</a>
+                </div>
+                <div class="w-12 h-12 bg-light flex items-center justify-center rounded-[6px]">
+                    <a class="text-button text-dark" href="">4</a>
+                </div>
+                <div class="w-12 h-12 bg-light flex items-center justify-center rounded-[6px]">
+                    <a class="text-button text-dark" href="">5</a>
+                </div>
+            </div>
+        </section>
+        <section class="mt-[112px] bg-dark_accent rounded-[6px] lg:flex pt-[32px] px-[28px] pb-[48px] lg:flex-row-reverse lg:px-24 lg:pt-10 lg:pb-16 lg:justify-center lg:items-center">
+            <div class="mb-[36px] lg:mb-0 lg:w-1/2 lg:pl-8">
+                <img class="lg:h-auto lg:w-full lg:object-contain" src="img/Contact.png" alt="Desenhos ao lado de um homem">
+            </div>
+            <div class="lg:w-1/2 lg:pr-8">
+                <h3 class="text-title3 text-light pb-4 lg:pb-6">Help To Build Your Dream Project</h3>
+                <p class="text-text text-light_gray mb-8 lg:mb-10">A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                <a class="bg-light text-button text-dark rounded-[6px] px-6 py-4" href="#">CONTACT NOW</a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-main pt-24 px-6 pb-12 text-center md:py-24 md:px-[134px] md:text-start">
+        <div class="md:flex md:justify-between md:mb-16">
+            <h4 class="text-title4 text-dark mb-12">Agency</h4>
+            <div>
+                <h5 class="text-title5 mb-4 text-dark_accent">MENU</h5>
+                <p class="text-text text-dark">About</p>
+                <p class="text-text text-dark">Services</p>
+                <p class="text-text text-dark">Blog</p>
+                <p class="text-text text-dark">Contact</p>
+            </div>
+            <div class="mt-12 md:mt-0">
+                <h5 class="text-title5 mb-4 text-dark_accent">SERVICE</h5>
+                <p class="text-text text-dark">Design</p>
+                <p class="text-text text-dark">Development</p>
+                <p class="text-text text-dark">Marketing</p>
+                <p class="text-text text-dark">See More</p>
+            </div>
+            <div class="mt-12 mb-16 flex justify-center g-2 md:mt-0">
+                <a class="bg-dark_accent rounded-[50%] no-underline flex justify-center items-center w-12 h-12 mr-2" href="#">
+                    <img src="img/facebook.png" alt="Logo facebook">
+                </a>
+                <a class="bg-dark_accent rounded-[50%] no-underline flex justify-center items-center w-12 h-12 mr-2" href="#">
+                    <img src="img/twitter.png" alt="Logo facebook">
+                </a>
+                <a class="bg-dark_accent rounded-[50%] no-underline flex justify-center items-center w-12 h-12 mr-2" href="#">
+                    <img src="img/instagram.png" alt="Logo facebook">
+                </a>
+            </div>
+        </div>
+        
+        <hr class="border-hr">
+        <div class="md:flex md:justify-between md:items-center">
+            <p class="text-text text-dark_gray w-[60%] my-10 mx-auto md:w-full ">Copyright © 2022 Laaqiq. All Rights Reserved.</p>
+            <div class="flex justify-between w-[80%] mx-auto md:justify-end">
+                <a class="no-underline text-text text-dark md:mr-16" href="">Terms of Use</a>
+                <a class="no-underline text-text text-dark" href="">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
